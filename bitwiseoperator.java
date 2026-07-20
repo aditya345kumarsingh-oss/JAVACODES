@@ -27,7 +27,7 @@ public class bitwiseoperator {
         int m=100;
         for(int i=1 ; i<=10 ; i++){
         n=n<<1;
-        System.out.println(n);
+        System.out.println(m);
         System.out.println();
         }
 
@@ -49,7 +49,7 @@ public class bitwiseoperator {
         //in power of 2 there will be 1 set bit for ex-->16= 00010000
 
         int d=16;
-        if ((n&(n-1))==0) {
+        if ((d&(d-1))==0) {
            System.out.println("power of 2");
             
         } else {
