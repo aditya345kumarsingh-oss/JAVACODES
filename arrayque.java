@@ -107,6 +107,31 @@ static int getunsorted(int hrr[]) {
     return -1;
 }
 
+//Q9. Swap Alternate Elements in an Array
+ static void swapAlternate(int irr[]) {
+
+        for (int i = 0; i < irr.length - 1; i += 2) {
+
+            int temp = irr[i];
+            irr[i] = irr[i + 1];
+            irr[i + 1] = temp;
+        }
+    }
+
+    //Q10. Print Array Intersection
+    static void intersection(int jrr1[], int jrr2[]) {
+
+        for (int i = 0; i < jrr1.length; i++) {
+
+            for (int j = 0; j < jrr2.length; j++) {
+
+                if (jrr1[i] == jrr2[j]) {
+                    System.out.print(jrr1[i] + " ");
+                    break;
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         //Q1 part
@@ -152,7 +177,27 @@ System.out.println("one: " + answ[1]);
 // Q8 part
 int hrr[]={1,2,6,5,4,8};
 System.out.println(getunsorted(hrr));
-      
+ 
+//Q9 part
+
+        int irr[] = {10, 20, 30, 40, 50, 60};
+
+        swapAlternate(irr);
+
+        System.out.println("After swapping:");
+
+        for (int i : irr) {
+            System.out.print(i + " ");
+        }
+
+        //Q10.part
+         int jrr1[] = {1, 2, 3, 4, 5};
+        int jrr2[] = {3, 4, 5, 6, 7};
+
+        System.out.println("Intersection elements:");
+
+        intersection(jrr1, jrr2);
+
       
 }
     
