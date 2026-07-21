@@ -133,6 +133,27 @@ static int getunsorted(int hrr[]) {
         }
     }
 
+
+
+//Q11. Print Alternate Extreme Elements
+static void alternateExtreme(int krr[]) {
+
+        int left = 0;
+        int right = krr.length - 1;
+
+        while (left <= right) {
+
+            System.out.print(krr[left] + " ");
+
+            if (left != right) {
+                System.out.print(krr[right] + " ");
+            }
+
+            left++;
+            right--;
+        }
+    }
+
     public static void main(String[] args) {
         //Q1 part
         int []arr={2,4,5,1};
@@ -197,6 +218,13 @@ System.out.println(getunsorted(hrr));
         System.out.println("Intersection elements:");
 
         intersection(jrr1, jrr2);
+
+        //Q11 part
+        int krr[] = {10, 20, 30, 40, 50};
+
+        System.out.println("Alternate Extreme Elements:");
+
+        alternateExtreme(krr);
 
       
 }
