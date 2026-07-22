@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class arrayque2 {
 
     //Q1.Reverse an array---using 2pointer
@@ -54,6 +56,29 @@ public class arrayque2 {
             
         }
       }
+
+      //Q4 Find the mode of the array (means find higher freq)
+      static int mode(int drr[]){
+        HashMap<Integer , Integer> freq = new HashMap<>();
+        for (int num : drr) {
+            freq.put(num ,freq.getOrDefault(num, 0)+1);
+            
+        }
+        int maxfreq= -1;
+        int maxfrequ =-1;
+        for (int key : freq.keySet()) {
+            int currentkey= key;
+            int currentkeys = freq.get(key);
+            if(currentkeys>maxfreq){
+                maxfreq= currentkeys;
+                maxfrequ=currentkey;
+            }
+            
+        }
+        return maxfrequ;
+
+      }
+        
     public static void main(String[] args) {
 
         //Q1 part 
@@ -73,6 +98,11 @@ public class arrayque2 {
           int crr[]={1,2,3,4,5};
           alt(crr);
         
+          // Q4 part 
+          int drr[]={1,2,2,3,4,5,5,5,5,3,6,7,1};
+          mode(drr);
+          System.out.println("Mode = " + mode(drr));
+}
     }
     
-}
+
