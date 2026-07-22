@@ -78,6 +78,39 @@ public class arrayque2 {
         return maxfrequ;
 
       }
+
+      //Q5. identify element with highest and lowest frequency
+       static int [] hlfr(int err[]){
+        HashMap<Integer , Integer> freqs = new HashMap<>();
+        for (int num : err) {
+            freqs.put(num ,freqs.getOrDefault(num, 0)+1);
+            
+        }
+        int highestfreq= Integer.MIN_VALUE;
+        int hightestnum= -1;
+        for (int key :freqs.keySet()) {
+            int currentkey= key;
+            int currentfreq=freqs.get(key);
+            if (currentfreq> highestfreq){
+                highestfreq =currentfreq;
+                hightestnum = currentkey;
+            }
+            
+        }
+        int lowestfreq=Integer.MAX_VALUE;
+        int lowestnum=-1;
+        for(int key : freqs.keySet()){
+           int currentkey= key;
+            int currentfreq=freqs.get(key);
+            if(currentfreq<lowestfreq){
+                lowestfreq=currentfreq;
+                lowestnum = currentkey;
+            }
+        }
+        int result []={hightestnum , lowestnum};
+        return result;
+
+       }
         
     public static void main(String[] args) {
 
@@ -102,6 +135,18 @@ public class arrayque2 {
           int drr[]={1,2,2,3,4,5,5,5,5,3,6,7,1};
           mode(drr);
           System.out.println("Mode = " + mode(drr));
+
+          //Q5 part 
+          int err[]={1,2,2,3,4,5,5,5,5,3,6,7,};
+          int result [] = hlfr(err);
+            System.out.println("highest :"+ result [0]);
+            System.out.println("lowest :"+ result [1]);
+        
+            
+
+          
+
+
 }
     }
     
