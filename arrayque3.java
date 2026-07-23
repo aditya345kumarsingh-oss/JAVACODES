@@ -40,7 +40,21 @@ static int missing(int []nums){
     return xorsum;
 
 }
+//Q3 unique element in array
+ static int unique(int[] brr) {
+
+        int xor = 0;
+
+        for (int num : brr) {
+            xor = xor ^ num;
+        }
+
+        return xor;
+    }
+
+
     public static void main(String[] args) {
+        //Q1 part
         int arr[] = {1, 0, 1, 0, 1, 0};
           sort(arr);
 
@@ -49,12 +63,20 @@ static int missing(int []nums){
             System.out.print(num + " ");
 
         }
+        //Q2 part
 
          int[] nums = {3, 0, 1};
 
         int ans = missing(nums);
 
         System.out.println("Missing Number: " + ans);
+
+        //Q3 part 
+        int[] brr = {2, 3, 5, 4, 5, 3, 4};
+
+        int result = unique(brr);
+
+        System.out.println("Unique Number: " + ans);
         
     }
     
