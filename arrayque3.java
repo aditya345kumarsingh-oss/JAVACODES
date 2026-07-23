@@ -24,6 +24,22 @@ public class arrayque3 {
 
     return arr;
 }
+
+//Q2 missing number
+static int missing(int []nums){
+    int xorsum=0;
+    for (int n : nums) {
+        xorsum=xorsum^n;
+        
+    }
+    int n= nums.length;
+    for(int i=0 ; i<=n; i++){
+        xorsum=xorsum^i;
+
+    }
+    return xorsum;
+
+}
     public static void main(String[] args) {
         int arr[] = {1, 0, 1, 0, 1, 0};
           sort(arr);
@@ -31,7 +47,14 @@ public class arrayque3 {
         System.out.print("Sorted Array: ");
         for (int num : arr) {
             System.out.print(num + " ");
+
         }
+
+         int[] nums = {3, 0, 1};
+
+        int ans = missing(nums);
+
+        System.out.println("Missing Number: " + ans);
         
     }
     
