@@ -83,6 +83,43 @@ static void threesum(int[] brr, int targett){
         return -1;
     }
 
+    //Q3 Pivot point 
+    // Find Pivot Index
+    static int pivot(int[] err) {
+
+        int n = err.length;
+
+        int[] leftSum = new int[n];
+        int[] rightSum = new int[n];
+
+        // Left Prefix Sum
+        leftSum[0] = err[0];
+        for (int i = 1; i < n; i++) {
+            leftSum[i] = leftSum[i - 1] + err[i];
+        }
+
+        // Right Prefix Sum
+        rightSum[n - 1] = err[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            rightSum[i] = rightSum[i + 1] + err[i];
+        }
+
+        // Find Pivot Index
+        for (int i = 0; i < n; i++) {
+
+            if (leftSum[i] - err[i] == rightSum[i] - err[i]) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+
+           
+
+
+
     public static void main(String[] args) {
         //Q1 part 
         int arr[]={2,3,4,5,6,};
@@ -120,9 +157,26 @@ static void threesum(int[] brr, int targett){
             //Q3 part 
             int[] drr = {1,2,3,4,4,5};
 
-        int res = first(drr);
+       int res = first(drr);
 
         System.out.println("First repeating element: " + res);
+
+        //Q4 part 
+         
+        int[] err = {1, 7, 3, 6, 5, 6};
+
+        int ans = pivot(err);
+
+        System.out.print("Array: ");
+
+        for (int num : err) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println();
+
+        System.out.println("Pivot Index = " + ans);
     }
-    }
-}
+}}
+    
+    
