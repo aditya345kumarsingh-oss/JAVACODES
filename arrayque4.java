@@ -18,6 +18,30 @@ static int [] twosum(int [] arr, int target){
     return ans;
       
 }
+
+
+//Q2 . three sum
+static void threesum(int[] brr, int targett){
+        int m = brr.length;
+        boolean found = false;
+
+        for (int i = 0; i < m - 2; i++) {
+            for (int j = i + 1; j < m - 1; j++) {
+                for (int k = j + 1; k < m; k++) {
+
+                    if (brr[i] + brr[j] + brr[k] == targett) {
+                        System.out.println(brr[i] + " " + brr[j] + " " + brr[k]);
+                        found = true;
+                    }
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println("No triplet found.");
+        }
+    }
+
     public static void main(String[] args) {
         int arr[]={2,3,4,5,6,};
         int target = 9;
@@ -31,7 +55,9 @@ static int [] twosum(int [] arr, int target){
             System.out.println("Values: " + arr[result[0]] + " " + arr[result[1]]);
         }
 
-        
+  int[] brr = {2, 3, 4, 5, 6};
+        int targett= 12;
+
+        threesum(brr, targett);
     }
-    
 }

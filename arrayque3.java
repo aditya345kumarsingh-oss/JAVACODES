@@ -72,12 +72,11 @@ static int missing(int []nums){
         System.out.println("Missing Number: " + ans);
 
         //Q3 part 
+        
         int[] brr = {2, 3, 5, 4, 5, 3, 4};
 
         int anss = unique(brr);
 
-        System.out.println("Unique Number: " + ans);
-        
+        System.out.println("Unique Number: " + anss);
     }
-    
 }
