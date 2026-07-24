@@ -74,7 +74,7 @@ static int missing(int []nums){
         //Q3 part 
         int[] brr = {2, 3, 5, 4, 5, 3, 4};
 
-        int result = unique(brr);
+        int anss = unique(brr);
 
         System.out.println("Unique Number: " + ans);
         
