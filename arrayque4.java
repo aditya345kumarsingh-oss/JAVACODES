@@ -175,7 +175,7 @@ static void threesum(int[] brr, int targett){
 
         System.out.println();
 
-        System.out.println("Pivot Index = " + ans);
+        System.out.println("Pivot Indexes = " + ans);
     }
 }}
     
