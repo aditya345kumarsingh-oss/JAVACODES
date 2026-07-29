@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class array2d {
+    //Q1
     //sum of each row in a 2D array
     // Function to find sum of each row
     static List<Integer> rowSums(int[][] arr) {
@@ -31,7 +32,34 @@ public class array2d {
         return result;
     }
 
+    //Q2
+    //for column
+     static List<Integer> columnSums(int[][] brr) {
+
+        List<Integer> result = new ArrayList<>();
+
+        int rows = brr.length;
+        int cols = brr[0].length;
+
+        // Traverse each column
+        for (int col = 0; col < cols; col++) {
+
+            int sum = 0;
+
+            // Traverse each row
+            for (int row = 0; row < rows; row++) {
+
+                sum = sum + brr[row][col];
+            }
+
+            result.add(sum);
+        }
+
+        return result;
+    }
+
     public static void main(String[] args) {
+        //Q1 part
 
         int[][] arr = {
                 {1, 2, 3},
@@ -42,6 +70,17 @@ public class array2d {
         List<Integer> ans = rowSums(arr);
 
         System.out.println("Row Sums: " + ans);
+
+        //Q2 part
+          int[][] brr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        List<Integer> anss = columnSums(arr);
+
+        System.out.println("Column Sums: " + ans);
     }
 }
     
