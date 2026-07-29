@@ -78,9 +78,9 @@ public class array2d {
                 {7, 8, 9}
         };
 
-        List<Integer> anss = columnSums(arr);
+        List<Integer> anss = columnSums(brr);
 
-        System.out.println("Column Sums: " + ans);
+        System.out.println("Column Sums: " + anss);
     }
 }
     
