@@ -85,25 +85,38 @@ static List<Integer> waveMatrix(int[][] matrix, int m, int n) {
     return result;
 }
 
-//Q4 Transpose of a matrix
+
  // Q4 Transpose of Matrix
-    static int[][] transpose(int[][] matrixx) {
+     
+    public static int[][] transpose(int[][] matrixx) {
 
-        int m = matrixx.length;
-        int n = matrixx[0].length;
+        //  matrix is null or empty
+        if (matrixx == null || matrixx.length == 0) {
+            return new int[0][0];
+        }
 
-        int[][] transpose = new int[n][m];
+        // Original matrix dimensions
+        int totalRows = matrixx.length;
+        int totalCols = matrixx[0].length;
 
-        for (int row = 0; row < m; row++) {
+        // Transposed matrix dimensions
+        int newTotalRows = totalCols;
+        int newTotalCols = totalRows;
 
-            for (int col = 0; col < n; col++) {
+        // Create new transpose matrix
+        int[][] ans = new int[newTotalRows][newTotalCols];
 
-                transpose[col][row] = matrixx[row][col];
+        // Fill transpose matrix
+        for (int i = 0; i < totalRows; i++) {
+
+            for (int j = 0; j < totalCols; j++) {
+
+                ans[j][i] = matrixx[i][j];
 
             }
         }
 
-        return transpose;
+        return ans;
     }
 
 
@@ -145,22 +158,37 @@ List<Integer> result = waveMatrix(matrix, 3, 3);
 System.out.println(result);
 
 //Q4 part 
-
-        int[][] matrixx = {
+int[][] matrixx = {
                 {1, 2, 3},
                 {4, 5, 6},
                 {7, 8, 9}
         };
 
-        int[][] answ = transpose(matrixx);
+        // Call transpose function
+        int[][] results = transpose(matrixx);
+
+        System.out.println("Original Matrix:");
+
+        for (int i = 0; i < matrixx.length; i++) {
+
+            for (int j = 0; j < matrixx[0].length; j++) {
+
+                System.out.print(matrixx[i][j] + " ");
+
+            }
+
+            System.out.println();
+        }
+
+        System.out.println();
 
         System.out.println("Transpose Matrix:");
 
-        for (int i = 0; i < answ.length; i++) {
+        for (int i = 0; i < results.length; i++) {
 
-            for (int j = 0; j < answ[0].length; j++) {
+            for (int j = 0; j < results[0].length; j++) {
 
-                System.out.print(answ[i][j] + " ");
+                System.out.print(results[i][j] + " ");
 
             }
 
