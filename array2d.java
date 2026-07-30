@@ -58,6 +58,34 @@ public class array2d {
         return result;
     }
 
+    // Q3 Wave Print Matrix
+static List<Integer> waveMatrix(int[][] matrix, int m, int n) {
+
+    List<Integer> result = new ArrayList<>();
+
+    // Move column wise
+    for (int col = 0; col < n; col++) {
+
+        // Odd column -> Bottom to Top
+        if ((col & 1) == 1) {
+
+            for (int row = m - 1; row >= 0; row--) {
+                result.add(matrix[row][col]);
+            }
+
+        } else {
+
+            // Even column -> Top to Bottom
+            for (int row = 0; row < m; row++) {
+                result.add(matrix[row][col]);
+            }
+        }
+    }
+
+    return result;
+}
+    
+
     public static void main(String[] args) {
         //Q1 part
 
@@ -81,7 +109,16 @@ public class array2d {
         List<Integer> anss = columnSums(brr);
 
         System.out.println("Column Sums: " + anss);
+
+        // Q3 part 
+  int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+List<Integer> result = waveMatrix(matrix, 3, 3);
+
+System.out.println(result);
     }
 }
-    
-
