@@ -84,6 +84,29 @@ static List<Integer> waveMatrix(int[][] matrix, int m, int n) {
 
     return result;
 }
+
+//Q4 Transpose of a matrix
+ // Q4 Transpose of Matrix
+    static int[][] transpose(int[][] matrixx) {
+
+        int m = matrixx.length;
+        int n = matrixx[0].length;
+
+        int[][] transpose = new int[n][m];
+
+        for (int row = 0; row < m; row++) {
+
+            for (int col = 0; col < n; col++) {
+
+                transpose[col][row] = matrixx[row][col];
+
+            }
+        }
+
+        return transpose;
+    }
+
+
     
 
     public static void main(String[] args) {
@@ -120,5 +143,29 @@ static List<Integer> waveMatrix(int[][] matrix, int m, int n) {
 List<Integer> result = waveMatrix(matrix, 3, 3);
 
 System.out.println(result);
+
+//Q4 part 
+
+        int[][] matrixx = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int[][] answ = transpose(matrixx);
+
+        System.out.println("Transpose Matrix:");
+
+        for (int i = 0; i < answ.length; i++) {
+
+            for (int j = 0; j < answ[0].length; j++) {
+
+                System.out.print(answ[i][j] + " ");
+
+            }
+
+            System.out.println();
+        }
+    
     }
 }
