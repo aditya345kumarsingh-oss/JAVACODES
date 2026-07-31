@@ -119,6 +119,36 @@ static List<Integer> waveMatrix(int[][] matrix, int m, int n) {
         return ans;
     }
 
+    // Q5 rotate image 
+     public static void rotate(int[][] matries, int N){
+        //transpose first
+        //swap matrix
+
+        for(int i=0; i<N ; i++){
+            for (int j=i+1; j<N ; j++){
+                //swap matrix[i][j]= matrix [i][j]
+                int temp= matries[i][j];
+                 matries [i][j] =  matries [j][i];
+                 matries [j][i] = temp;
+
+
+            }
+        }
+        //reverse all row 
+        for(int row=0; row<N; row++){
+            int startcol=0;
+            int endcol=N-1;
+            while(startcol<endcol){
+               int temp = matries[row][startcol];
+               matries[row][startcol] = matries[row][endcol];
+               matries[row][endcol] = temp;
+                startcol++;
+                endcol--;
+            }
+        }
+
+    }
+
 
     
 
@@ -194,6 +224,25 @@ int[][] matrixx = {
 
             System.out.println();
         }
-    
+
+           // Q5 starts here
+int[][] matries = {
+    {1,2,3},
+    {4,5,6},
+    {7,8,9}
+};
+
+rotate(matries, 3);
+
+System.out.println("Rotated Matrix:");
+
+for (int i = 0; i < matries.length; i++) {
+
+    for (int j = 0; j < matries[0].length; j++) {
+        System.out.print(matries[i][j] + " ");
     }
+
+    System.out.println();
+}
+}
 }
