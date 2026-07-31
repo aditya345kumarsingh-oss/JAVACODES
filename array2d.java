@@ -146,8 +146,58 @@ static List<Integer> waveMatrix(int[][] matrix, int m, int n) {
                 endcol--;
             }
         }
-
     }
+//Q6 Spiral print a matrix 
+     static List<Integer> spiral(int[][] matriess) {
+
+    int m = matriess.length;
+    int n = matriess[0].length;
+
+    List<Integer> res = new ArrayList<>();
+
+    int startingrow = 0;
+    int endingrow = m - 1;
+
+    int startingcol = 0;
+    int endingcol = n - 1;
+
+    while (startingrow <= endingrow && startingcol <= endingcol) {
+
+        // Left to Right
+        for (int col = startingcol; col <= endingcol; col++) {
+            res.add(matriess[startingrow][col]);
+        }
+        startingrow++;
+
+        // Top to Bottom
+        for (int row = startingrow; row <= endingrow; row++) {
+            res.add(matriess[row][endingcol]);
+        }
+        endingcol--;
+
+        // Right to Left
+        if (startingrow <= endingrow) {
+
+            for (int col = endingcol; col >= startingcol; col--) {
+                res.add(matriess[endingrow][col]);
+            }
+
+            endingrow--;
+        }
+
+        // Bottom to Top
+        if (startingcol <= endingcol) {
+
+            for (int row = endingrow; row >= startingrow; row--) {
+                res.add(matriess[row][startingcol]);
+            }
+
+            startingcol++;
+        }
+    }
+
+    return res;
+}
 
 
     
@@ -243,6 +293,17 @@ for (int i = 0; i < matries.length; i++) {
     }
 
     System.out.println();
+
+    //Q6 part 
+    int[][] matriess = {
+    {1,2,3},
+    {4,5,6},
+    {7,8,9}
+};
+
+List<Integer> res = spiral(matriess);
+
+System.out.println(res);
 }
 }
 }
