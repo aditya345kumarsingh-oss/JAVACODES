@@ -5,7 +5,7 @@ public class Binarysearch {
        
 
         while (left <= right) {
-            int mid = (left + right ) / 2;
+            int mid = left + (right - left) / 2;
             
 
             // Check if the target is present at mid
