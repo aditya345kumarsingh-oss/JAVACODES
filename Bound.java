@@ -1,4 +1,5 @@
-public class LowerBound {
+public class Bound {
+    //Lower bound &  Upper bound
 
     static int getLowerBound(int[] arr, int target) {
 
@@ -25,10 +26,14 @@ public class LowerBound {
         return ans;
     }
 
+    
+
     public static void main(String[] args) {
 
         int[] arr = {10, 20, 30, 30, 30, 40, 45};
-        int target = 30;
+       // int target = 30;
+         int target = 35;
+
 
         int result = getLowerBound(arr, target);
 
