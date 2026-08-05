@@ -1,185 +1,109 @@
-//  import java.util.Scanner;
-// public class array {
-//     public static void main(String[] args) {
-//            int arr[];
-//          arr = new int[5];
-//          int brr[]= {2,32,4,5,6};
-//        // checking the length of array
-//          System.out.println(brr[3]);
-//          int n=brr.length;
-//         // loop
-//          for (int i=0;i<brr.length;i++){
-//              System.out.println(brr[i]);
-//          }}}
+import java.util.Scanner;
+
+public class array{
+    public static void main(String[] args) {
+
         
-// //for each loop
-//     for (int a:brr){
-//         System.out.println(a);
-//     }
+        // 1. DECLARING AND INITIALIZING ARRAY
+      
+        int[] arr = new int[5];
+        int[] brr = {2, 32, 4, 5, 6};
 
-//    // taking input from user
+        System.out.println("Element at index 3: " + brr[3]);
 
-//     int arr[]=new int [5];
-//     Scanner sc=new Scanner(System.in);
-//     int n=arr.length;
-//     for (int i=0;i<=n-1;i++){
-//         System.out.println("Enter the value of index "+i);
-//         arr[i]=sc.nextInt();
-//     }
-//     System.out.println("The values in the array are: ");
-//     for (int a:arr){
-//         System.out.println(a);
-//     }
+        System.out.println("\nPrinting array using for loop:");
+        for (int i = 0; i < brr.length; i++) {
+            System.out.println(brr[i]);
+        }
 
-//    // adding the array
+        System.out.println("\nPrinting array using for-each loop:");
+        for (int a : brr) {
+            System.out.println(a);
+        }
 
-//      int arr[]={2,3,4,10,1};
-//          int sum=0;
-//         for each method
-//         for (int a:arr){
-//             sum=sum+a;
-//         }
-//         System.out.println("The sum of the array is: "+sum);
-//         only for loop
-//         int n=arr.length;
-//         for (int i=0;i<=n-1;i++){
-//             int a=arr[i];
-//             sum=sum+a;
-//         }
-//         System.out.println("The sum of the array is: "+sum);
         
-//         multiplying the array
-//         int b=1;
-//         int n=arr.length;
-//         for (int i=0;i<=n-1;i++){
-//             int a=arr[i];
-//             b=b*a;
-//         }
-//         System.out.println("The multiplication of the array is: "+b);
-// find the maximum and minimum value in the array
-//         int max=arr[0];
-//         int min=arr[0];
-//         int n=arr.length;
-//         for (int i=0;i<=n-1;i++){
-//             if (arr[i]>max){
-//                 max=arr[i];
-//             }
-//             if (arr[i]<min){
-//                 min=arr[i];
-//             }
-//         }
-//         System.out.println("The maximum value in the array is: "+max);
-//         System.out.println("The minimum value in the array is: "+min);
+        // 2. TAKING ARRAY INPUT FROM USER
+        
+        Scanner sc = new Scanner(System.in);
 
+        int[] inputArr = new int[5];
 
+        for (int i = 0; i < inputArr.length; i++) {
+            System.out.print("Enter value for index " + i + ": ");
+            inputArr[i] = sc.nextInt();
+        }
 
-//       2D array
-//         int arr[][];//declaring 2D array
-//         arr = new int[3][4];//allocating memory for 2D array
-//         int[][] brr = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};// initializing 2D array
-//         System.out.println(brr[1][0]);//accessing 2D array
+        System.out.println("Values in the array:");
+        for (int a : inputArr) {
+            System.out.print(a + " ");
+        }
+        System.out.println();
 
-//        printing the whole row and column of 2D array
-//         int n = brr.length;
-//         int m = brr[0].length;
-
-//         for (int i = 0; i < n; i++) {
-//             for (int j = 0; j < m; j++) {
-//                 System.out.print(brr[i][j] + " ");
-//             }
-//             System.out.println();
-//         }
-
-//         jagged array
-//          int[][] brr = {{1, 2, 3, }, {5, 6, }, {9, 10, 11, 12}};
-
-//         int rowLength = brr.length;
-
-//         // Traverse each row
-//         for (int rowIndex = 0; rowIndex < rowLength; rowIndex++) {
-
-//             // Number of columns in the current row
-//             int colLength = brr[rowIndex].length;
-
-//             // Traverse each column
-//             for (int colIndex = 0; colIndex < colLength; colIndex++) {
-//                 System.out.print(brr[rowIndex][colIndex] + " ");
-//             }
-
-//             // Move to the next line after each row
-//             System.out.println();
-//         }
-
-//  shorter way to print the jagged array      
-//  for (int rowIndex = 0; rowIndex <=brr.length-1; rowIndex++) {
-
-//             for (int colIndex = 0; colIndex <= brr[rowIndex].length-1; colIndex++) {
-
-//                 System.out.print(brr[rowIndex][colIndex] + " ");
-//             }
-
-//             System.out.println();
-//         }
-
-// 2d input from user
-// int arr[][];
-// arr=new int [3][4];
-// Scanner sc=new Scanner(System.in);
-// for (int i=0;i<=arr.length-1;i++){
-//     for (int j=0;j<=arr[i].length-1;j++){
-//         System.out.println("provide value for row "+i+" column "+j);
-//         arr[i][j]=sc.nextInt();
        
-//     }
-// } 
-// for (int rowIndex = 0; rowIndex <=arr.length-1; rowIndex++) {
+        // 3. SUM OF ARRAY
+       
+        int[] arr1 = {2, 3, 4, 10, 1};
 
-//            for (int colIndex = 0; colIndex <= arr[rowIndex].length-1; colIndex++) {
-//                  System.out.print(arr[rowIndex][colIndex] + " ");
-//           }
+        int sum = 0;
+        for (int a : arr1) {
+            sum += a;
+        }
 
-//             System.out.println();
-//         }
-//     }} 
+        System.out.println("\nSum of array = " + sum);
 
-// sum for 2d array
-// int arr[][]={{1,2,3},{4,5,6},};
-// int sum=0;
-// for (int rowIndex = 0; rowIndex <=arr.length-1; rowIndex++) {
+        
+        // 4. MULTIPLICATION OF ARRAY
+        
+        int product = 1;
 
-//            for (int colIndex = 0; colIndex <= arr[rowIndex].length-1; colIndex++) {
-//                  sum=sum+arr[rowIndex][colIndex];
-//           }
-//         }
-//         System.out.println("The sum of the 2D array is: "+sum);
-//     }}  
+        for (int a : arr1) {
+            product *= a;
+        }
 
-//     multiplication of 2D array
-//     int ans=1;
-//    for (int i = 0; i < arr.length; i++) {
-//         for (int j = 0; j < arr[i].length; j++) {
-//                 int a=arr[i][j];
-//             ans = a*ans;
-//         }
-//     }
-//     System.out.println(ans);
-// }}
+        System.out.println("Product of array = " + product);
 
-// max and min of 2D array
-// int max=arr[0][0];
-// int min=arr[0][0];
-// for (int i = 0; i < arr.length; i++) {
-//     for (int j = 0; j < arr[i].length; j++) {
-//         if (arr[i][j]>max){
-//             max=arr[i][j];
-//         }
-//         if (arr[i][j]<min){
-//             min=arr[i][j];
-//         }
-//     }
-// }
-// System.out.println("The maximum value in the 2D array is: "+max);
-// System.out.println("The minimum value in the 2D array is: "+min);
+       
+        // 5. MAXIMUM AND MINIMUM IN ARRAY
+        
+        int max = arr1[0];
+        int min = arr1[0];
 
-//         }
-//         }
+        for (int i = 1; i < arr1.length; i++) {
+
+            if (arr1[i] > max) {
+                max = arr1[i];
+            }
+
+            if (arr1[i] < min) {
+                min = arr1[i];
+            }
+        }
+
+        System.out.println("Maximum = " + max);
+        System.out.println("Minimum = " + min);
+
+       
+        // 6. 2D ARRAY
+       
+        int[][] matrix = {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+        };
+
+        System.out.println("\nElement at [1][0] = " + matrix[1][0]);
+
+        System.out.println("\nPrinting 2D Array:");
+
+        for (int i = 0; i < matrix.length; i++) {
+
+            for (int j = 0; j < matrix[i].length; j++) {
+
+                System.out.print(matrix[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+
+       
+    }}
