@@ -12,8 +12,8 @@ public class array{
         System.out.println("Element at index 3: " + brr[3]);
 
         System.out.println("\nPrinting array using for loop:");
-        for (int i = 0; i < brr.length; i++) {
-            System.out.println(brr[i]);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
         }
 
         System.out.println("\nPrinting array using for-each loop:");
@@ -106,4 +106,110 @@ public class array{
         }
 
        
-    }}
+     //7. JAGGED ARRAY
+       
+        int[][] jagged = {
+                {1, 2, 3},
+                {5, 6},
+                {9, 10, 11, 12}
+        };
+
+        System.out.println("\nJagged Array:");
+
+        for (int i = 0; i < jagged.length; i++) {
+
+            for (int j = 0; j < jagged[i].length; j++) {
+
+                System.out.print(jagged[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+
+        
+        // 8. 2D ARRAY INPUT
+        
+        int[][] userMatrix = new int[3][4];
+
+        System.out.println("\nEnter values for 2D array:");
+
+        for (int i = 0; i < userMatrix.length; i++) {
+
+            for (int j = 0; j < userMatrix[i].length; j++) {
+
+                System.out.print("Row " + i + " Column " + j + ": ");
+                userMatrix[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("\n2D Array:");
+
+        for (int i = 0; i < userMatrix.length; i++) {
+
+            for (int j = 0; j < userMatrix[i].length; j++) {
+
+                System.out.print(userMatrix[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+
+       
+        // 9. SUM OF 2D ARRAY
+       
+        int[][] arr2 = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        int sum2 = 0;
+
+        for (int i = 0; i < arr2.length; i++) {
+
+            for (int j = 0; j < arr2[i].length; j++) {
+
+                sum2 += arr2[i][j];
+            }
+        }
+
+        System.out.println("\nSum of 2D array = " + sum2);
+
+       
+        // 10. PRODUCT OF 2D ARRAY
+        
+        int ans = 1;
+
+        for (int i = 0; i < arr2.length; i++) {
+
+            for (int j = 0; j < arr2[i].length; j++) {
+
+                ans *= arr2[i][j];
+            }
+        }
+
+        System.out.println("Product of 2D array = " + ans);
+
+        
+        // 11. MAXIMUM AND MINIMUM OF 2D ARRAY
+       
+        int max2 = arr2[0][0];
+        int min2 = arr2[0][0];
+
+        for (int i = 0; i < arr2.length; i++) {
+
+            for (int j = 0; j < arr2[i].length; j++) {
+
+                if (arr2[i][j] > max2)
+                    max2 = arr2[i][j];
+
+                if (arr2[i][j] < min2)
+                    min2 = arr2[i][j];
+            }
+        }
+
+        System.out.println("Maximum = " + max2);
+        System.out.println("Minimum = " + min2);
+
+        sc.close();
+    }
+}
