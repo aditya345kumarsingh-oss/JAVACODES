@@ -22,6 +22,6 @@ public class Selectionsort {
             System.out.print(arr[i] + " ");
         }
     }
-    // selection sort are on 
+    
 }
  
