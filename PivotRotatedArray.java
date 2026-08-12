@@ -39,7 +39,7 @@ public class PivotRotatedArray {
 
     public static void main(String[] args) {
 
-        int[] nums = {7, 9, 1, 2, 3};
+        int[] nums = {50, 60,70, 10, 20, 30 , 40 };
 
         int pivot = findPivotIndex(nums);
 
