@@ -8,7 +8,6 @@ public class input {
         // 1. INPUT IN JAVA
         // =====================================================
 
-        
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the first value: ");
@@ -21,28 +20,22 @@ public class input {
 
         System.out.println("The sum is: " + sum);
 
-        sc.close();
-        
-
 
         // =====================================================
         // 2. IF STATEMENT
         // =====================================================
 
-        
         int age = 19;
 
         if (age >= 18) {
             System.out.println("You are eligible to vote.");
         }
-        
 
 
         // =====================================================
         // 3. IF ELSE STATEMENT
         // =====================================================
 
-        
         int agee = 10;
 
         if (agee >= 18) {
@@ -50,14 +43,12 @@ public class input {
         } else {
             System.out.println("You are not eligible to vote.");
         }
-        
 
 
         // =====================================================
         // 4. IF ELSE IF LADDER
         // =====================================================
 
-        
         int day = 3;
 
         if (day == 1) {
@@ -72,14 +63,12 @@ public class input {
         } else {
             System.out.println("Invalid day");
         }
-        
 
 
         // =====================================================
         // 5. NESTED IF ELSE
         // =====================================================
 
-        
         int ages = 20;
         char gender = 'M';
 
@@ -87,7 +76,7 @@ public class input {
 
             System.out.println("You are a male.");
 
-            if (age > 18) {
+            if (ages > 18) {
                 System.out.println("You are a male and age > 18.");
             } else {
                 System.out.println("You are a male and age <= 18.");
@@ -97,49 +86,45 @@ public class input {
 
             System.out.println("You are not a male.");
 
-            if (age > 18) {
+            if (ages > 18) {
                 System.out.println("You are not a male and age > 18.");
             } else {
                 System.out.println("You are not a male and age <= 18.");
             }
         }
-        
 
 
         // =====================================================
         // 6. TERNARY OPERATOR
         // =====================================================
 
-        
-        int age = 20;
+        int heroAge = 20;
 
-        int isHero = (age == 23) ? 1 : 0;
+        int isHero = (heroAge == 23) ? 1 : 0;
 
         System.out.println("isHero = " + isHero);
-        
 
 
-        // Better ternary example:
+        // =====================================================
+        // BETTER TERNARY EXAMPLE
+        // =====================================================
 
-        
-        int age = 20;
+        int votingAge = 20;
 
-        String result = (age >= 18)
+        String result = (votingAge >= 18)
                 ? "Eligible to vote"
                 : "Not eligible to vote";
 
         System.out.println(result);
-        
 
 
         // =====================================================
         // 7. SWITCH CASE
         // =====================================================
 
-        
-        int day = 3;
+        int switchDay = 3;
 
-        switch (day) {
+        switch (switchDay) {
 
             case 1:
                 System.out.println("Monday");
@@ -156,7 +141,7 @@ public class input {
             default:
                 System.out.println("Invalid day");
         }
-        
 
+        sc.close();
     }
 }
