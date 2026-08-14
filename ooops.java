@@ -1,48 +1,84 @@
-// public class ooops {
-//     public static void main(String[] args) {
-//         // default constructor
-//       oops A= new oops();
-//       A.id=1;
-//       A.age=20;
-//        A.name="John";
-//       A.subject=3;
+public class Ooops {
 
-       //ENCAPSULATION // parameterized constructor
-    // oops b = new oops(1,20,"John",3,"Jane");
-    // System.out.println(b.getName());
-    //    System.out.println(b.getAge());// OLD AGE 
+    public static void main(String[] args) {
 
-    //   A.setAge(35);// GETTER AND SETTER FOR ACCESSING PRIVATE VARIABLE
-      // System.out.println(A.getAge());// NEW AGE AFTER SETTING AGE
-      
-      // b.study();
-      //  b.sleep();
-      //  b.bunk();
-    // }}
+        // =====================================
+        // 1. DEFAULT CONSTRUCTOR
+        // =====================================
 
-    // // parameterized constructor
-   // oops A= new oops(1,20,"John",3,"Jane");
-    //   System.out.println(A.name);
-    //   System.out.println(A.age);
-    //   System.out.println(A.id);
-    //   System.out.println(A.subject);
-    //   A.study();
-    //   A.sleep();
-    //   A.bunk();
-    // }}
+        Oops A = new Oops();
+
+        A.id = 1;
+        A.age = 20;
+        A.name = "John";
+        A.subject = 3;
+
+        System.out.println("Default Constructor:");
+        System.out.println(A.id);
+        System.out.println(A.age);
+        System.out.println(A.name);
+        System.out.println(A.subject);
+
+        A.study();
+        A.sleep();
+        A.bunk();
 
 
-   
+        // =====================================
+        // 2. ENCAPSULATION
+        // =====================================
 
-    // copy constructor
-    // oops B= new oops(A);
-    //   System.out.println(B.name);
-    //   System.out.println(B.age);
-    //   System.out.println(B.id);
-    //   System.out.println(B.subject);
-    //   B.study();
-    //   B.sleep();
-    //   B.bunk();
-      
-    // }}
-        
+        Oops B = new Oops(2, 20, "Rahul", 4, "Jane");
+
+        System.out.println("\nEncapsulation:");
+
+        // Getter
+        System.out.println("Name: " + B.getName());
+        System.out.println("Old Age: " + B.getAge());
+
+        // Setter
+        B.setAge(35);
+
+        System.out.println("New Age: " + B.getAge());
+
+        B.study();
+        B.sleep();
+        B.bunk();
+
+
+        // =====================================
+        // 3. PARAMETERIZED CONSTRUCTOR
+        // =====================================
+
+        Oops C = new Oops(3, 21, "Aditya", 5, "Private");
+
+        System.out.println("\nParameterized Constructor:");
+
+        System.out.println("Name: " + C.name);
+        System.out.println("Age: " + C.age);
+        System.out.println("ID: " + C.id);
+        System.out.println("Subject: " + C.subject);
+
+        C.study();
+        C.sleep();
+        C.bunk();
+
+
+        // =====================================
+        // 4. COPY CONSTRUCTOR
+        // =====================================
+
+        Oops D = new Oops(C);
+
+        System.out.println("\nCopy Constructor:");
+
+        System.out.println("Name: " + D.name);
+        System.out.println("Age: " + D.age);
+        System.out.println("ID: " + D.id);
+        System.out.println("Subject: " + D.subject);
+
+        D.study();
+        D.sleep();
+        D.bunk();
+    }
+}
