@@ -63,20 +63,17 @@ public class BSonAnswer {
                 }
             }
 
-            System.out.println(
-                "This round answer is: " + ans
-            );
-        }
+             System.out.printf("This round answer is: %.3f%n", ans);
+                }
 
-        System.out.println("Final answer is: " + ans);
-
+                  System.out.printf("Final answer is: %.3f%n", ans);
         return ans;
     }
 
 
     public static void main(String[] args) {
 
-        int x = 458753;
+        int x = 56;
 
         BSonAnswer obj = new BSonAnswer();
 
