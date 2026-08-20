@@ -78,7 +78,7 @@ public class AllocateBooks {
     }
  public static void main(String[] args) {
 
-        int[] books = {10, 20, 30, 40};
+        int[] books = {10, 20, 30, 40, 50};
 
         int students = 2;
 
