@@ -40,8 +40,8 @@ public class Nthroot {
 
     public static void main(String[] args) {
 
-        int n = 8;
-        int m = 64;
+        int n = 3;
+        int m = 27;
 
         int result = nthRoot(n, m);
 
