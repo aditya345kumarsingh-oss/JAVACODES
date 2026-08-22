@@ -63,13 +63,13 @@ public class AllocateBooks {
 
                 ans = mid;
 
-                // Try to find smaller answer
+                // Try to find smaller answer or left side of mid
                 e = mid - 1;
             }
 
             else {
 
-                // Need to allow more pages
+                // Need to allow more pages or right side of mid
                 s = mid + 1;
             }
         }
