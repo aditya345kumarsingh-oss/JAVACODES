@@ -54,7 +54,7 @@ public class Painterpartition {
     }
     
     public static void main(String[] args) {
-        int [] boards = {10,20,30,40};
+        int [] boards = {10,20,30,40, 50};
         int painters = 2;
         int result = painterpartition(boards,painters);
         System.out.println("Painting time: " + result);
