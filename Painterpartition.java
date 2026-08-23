@@ -1,6 +1,6 @@
 public class Painterpartition {
     // Check if allocation is possible
-    static boolean ispollsible(int [] boards , int painters , int maxlength){
+    static boolean ispossible(int [] boards , int painters , int maxlength){
         int paintercount=1;
         int length =0;
         // Iterate through all the boards
@@ -42,7 +42,7 @@ public class Painterpartition {
         // Binary Search on Answer
         while (s<=e){
             int mid = s + (e-s)/2;
-            if (ispollsible(boards,painters,mid)){
+            if (ispossible(boards,painters,mid)){
                 ans=mid;
                 e=mid-1;
             }
