@@ -31,4 +31,24 @@ public class Aggrssivecow {
         int end = stalls[stalls.length - 1] - stalls[0];
         int answer = 0;
 
-     
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (isPossible(stalls, cows, mid)) {
+                answer = mid;
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        int[] stalls = {4, 2, 1, 3, 6};
+        int cows = 2;
+
+        System.out.println("Maximum minimum distance = " + aggressiveCows(stalls, cows));
+    }
+}
