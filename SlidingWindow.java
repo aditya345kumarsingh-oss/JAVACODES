@@ -26,7 +26,7 @@ public class SlidingWindow {
 
     public static void main(String[] args) {
 
-        int[] arr = {2, 1, 5, 1, 3, 2};
+        int[] arr = {2, 1, 5, 1, 3, 2,8, 6, 4, 7, 9};
 
         int k = 3;
 
