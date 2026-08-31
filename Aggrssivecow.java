@@ -47,7 +47,7 @@ public class Aggrssivecow {
 
     public static void main(String[] args) {
         int[] stalls = {4, 2, 1, 3, 6};
-        int cows = 2;
+        int cows = 5;
 
         System.out.println("Maximum minimum distance = " + aggressiveCows(stalls, cows));
     }
