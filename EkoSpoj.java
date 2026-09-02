@@ -41,7 +41,7 @@ public class EkoSpoj {
 
                 answer = mid;
 
-                // Try a higher cutting height
+                // Try a higher cutting height and move right 
                 start = mid + 1;
             }
 
@@ -49,6 +49,7 @@ public class EkoSpoj {
 
                 // Height is too high,
                 // so cut lower
+                // Move left
                 end = mid - 1;
             }
         }
