@@ -62,7 +62,7 @@ public class EkoSpoj {
 
         int[] trees = {20, 15, 10, 17};
 
-        int woodRequired = 7;
+        int woodRequired = 6;
 
         int result = ekoSpoj(trees, woodRequired);
 
