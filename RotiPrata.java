@@ -83,7 +83,7 @@ public class RotiPrata {
 
         int n = cook.length;
 
-        int p = 10;
+        int p = 11;
 
         int result = minTime(cook, n, p);
 
