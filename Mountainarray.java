@@ -19,7 +19,7 @@ public class Mountainarray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {10, 20,30, 40,50, 60, 70, 25};
+        int[] arr = {10, 20,30, 40,50, 60, 70, 25,30, 20, 10};
         int peakIndex = findPeak(arr);
         System.out.println("Peak element is at index: " + peakIndex + ", value: " + arr[peakIndex]);
     }
